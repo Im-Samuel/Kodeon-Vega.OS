@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Registro Cliente</title>
+  <link rel="stylesheet" href="../assets/css/stylelogin.css" />
+  <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="Reserva.html">Reservar</a></li>
+          <li><a href="LoginCliente.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+    <a href="LoginPersonal.html" class="btn-cliente">Personal</a>
+  </header>
+
+  <main>
+  <section class="login-box" id="registro-box">
+      <h2>Crear cuenta cliente</h2>
+      <form id="registro-form">
+        <label for="reg-id">ID Usuario</label>
+        <input type="text" id="reg-id" required placeholder="Ej: juan23">
+
+        <label for="reg-nombre">Nombre</label>
+        <input type="text" id="reg-nombre" required placeholder="Tu nombre">
+
+        <label for="reg-pass">Contraseña</label>
+        <input type="password" id="reg-pass" required minlength="4" placeholder="Mínimo 4 caracteres">
+
+        <button type="submit" class="btn-login">Registrarme</button>
+        <a href="LoginCliente.html" class="forgot">Ya tengo cuenta</a>
+      </form>
+      <div id="registro-msg"></div>
+    </section>
+  </main>
+
+  <script type="module" src="../assets/js/registro-cliente.js"></script>
+</body>
+</html>

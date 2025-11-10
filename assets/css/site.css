@@ -1,0 +1,66 @@
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#666666;
+  --primary:#111111;
+  --primary-600:#333333;
+  --accent:#0ea5e9;
+}
+*{box-sizing:border-box}
+
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.section{padding:60px 0;background:#fff}
+.section-title{font-size:28px;margin:0 0 20px 0;text-align:center}
+
+/* Botones */
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-600)}
+.btn-secondary{background:#f4f4f4;color:#111;border:1px solid #e5e5e5}
+.btn-secondary:hover{background:#eaeaea}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,#f7fafc, #ffffff);padding:120px 0 80px 0;position:relative}
+.hero h1{font-size:46px;margin:0 0 10px 0}
+.hero p{font-size:18px;color:var(--muted);max-width:700px}
+.hero-actions{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* Forzar disposición vertical en páginas de contenido */
+main{display:block}
+
+/* Grid cards */
+.grid{display:grid;gap:20px}
+.cards-3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.cards-3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cards-3{grid-template-columns:1fr}}
+.card{border:1px solid #eee;border-radius:14px;padding:20px;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.04)}
+.card .icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;margin-bottom:10px}
+.card h3{margin:6px 0 8px 0}
+.card p{margin:0;color:#555}
+
+/* CTA */
+.cta{padding:50px 0;background:linear-gradient(180deg,#ffffff,#f7fafc)}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cta-inner h2{margin:0}
+@media(max-width:700px){.cta-inner{flex-direction:column;text-align:center}}
+
+/* Scroll horizontal */
+.cards-scroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.cards-scroll .card{min-width:280px;max-width:320px;scroll-snap-align:start}
+.cards-scroll::-webkit-scrollbar{height:10px}
+.cards-scroll::-webkit-scrollbar-track{background:transparent}
+.cards-scroll::-webkit-scrollbar-thumb{background:#e0e0e0;border-radius:8px}
+
+/* Página Servicios */
+.services-hero{padding:80px 0 30px}
+.services-hero h1{margin:0 0 8px}
+.services-hero p{margin:0;color:var(--muted)}
+.service-card .price{margin-top:8px;font-weight:700}
+
+/* Página Nosotros */
+.about-hero{padding:80px 0 20px}
+.about-hero h1{margin:0 0 10px}
+.about-hero p{margin:0;color:var(--muted)}
+.about-grid{display:grid;gap:24px;grid-template-columns:2fr 1fr}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+.about-box{border:1px solid #eee;border-radius:14px;padding:20px;background:#fff}

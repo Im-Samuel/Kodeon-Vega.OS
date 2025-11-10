@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Reservas</title>
+  <link rel="stylesheet" href="../../assets/css/stylelogin.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../servicios.html">Servicios</a></li>
+          <li><a href="../nosotros.html">Nosotros</a></li>
+          <li><a href="../Reserva.html">Reservar</a></li>
+          <li><a href="../LoginCliente.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button id="auth-avatar" class="auth-avatar" hidden></button>
+    <div id="profile-dropdown" class="profile-dropdown" hidden></div>
+  </header>
+
+  <main>
+    <h1>Panel de Reservas</h1>
+    <p id="reservas-info">Cargando...</p>
+    <div id="reservas-container"></div>
+  </main>
+
+  <script type="module" src="../../assets/js/Auth.js"></script>
+  <script type="module" src="../../assets/js/avatar.js"></script>
+  <script type="module" src="../../assets/js/reservas-page.js"></script>
+</body>
+</html>

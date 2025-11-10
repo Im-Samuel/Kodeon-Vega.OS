@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manual de Usuario — Hotel Vega.OS</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f1f1f;
+      --primary: #0d5c99;
+      --border: #d9d9d9;
+      --code-bg: #f5f7fa;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif; margin:0; color: var(--text); background: var(--bg); line-height: 1.5; }
+    header { padding: 1.4rem 1.8rem; background: var(--primary); color: #fff; }
+    header h1 { margin:0; font-size: 1.9rem; }
+    main { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    h2 { margin-top:2.2rem; border-bottom: 2px solid var(--border); padding-bottom:.4rem; }
+    h3 { margin-top:1.6rem; }
+    p { margin: .75rem 0; }
+    ul,ol { padding-left:1.25rem; margin:.5rem 0 1rem; }
+    code { background: var(--code-bg); padding: .15rem .35rem; border-radius: 4px; font-size: .9rem; }
+    .callout { border-left:4px solid var(--primary); background:#eef6fc; padding:.75rem 1rem; margin:1rem 0; }
+    .roles { display:grid; gap:.6rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); margin:1rem 0 1.2rem; }
+    .role-box { border:1px solid var(--border); padding:.7rem .8rem; border-radius:6px; background:#fafafa; }
+    .footer-note { margin-top:3rem; font-size:.85rem; color:#555; }
+    table { border-collapse: collapse; width:100%; margin: .8rem 0 1.4rem; }
+    th, td { border: 1px solid var(--border); padding: .55rem .6rem; text-align:left; font-size:.95rem; }
+    th { background:#f0f3f7; }
+    a { color: var(--primary); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+
+    /* Sección portada para impresión */
+    .cover { text-align:center; margin:2rem 0 3rem; }
+    .cover h2 { border:none; padding:0; margin:0 0 .5rem; }
+
+    @media print {
+      header, .print-hint { display:none; }
+      body { background:#fff; }
+      a { color:#000; }
+    }
+    .print-hint { background:#fff8d6; border:1px solid #e6d699; padding:.6rem .85rem; border-radius:6px; font-size:.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Manual de Usuario — Hotel Vega.OS</h1>
+  </header>
+  <main>
+    <section class="cover">
+      <h2>Hotel Vega.OS</h2>
+      <p>Guía para navegación, reservas y gestión básica — Versión 1.0 (2025)</p>
+    </section>
+
+    <div class="print-hint">Para generar PDF: Ctrl+P (Windows) / Cmd+P (Mac) → Selecciona "Guardar como PDF". Para abrir en Word: abre este archivo (HTML) directamente en Word o copia el contenido.</div>
+
+    <h2>1. Propósito</h2>
+    <p>Este manual explica cómo usar el sitio del hotel: crear cuenta de cliente, iniciar sesión, realizar reservas y acceder al panel de administración básico.</p>
+
+    <h2>2. Alcance</h2>
+    <ul>
+      <li>Usuarios finales (clientes).</li>
+      <li>Personal interno (Administrador, Recepcionista).</li>
+      <li>No cubre integración con backend ni servidores externos.</li>
+    </ul>
+
+    <h2>3. Requisitos previos</h2>
+    <ul>
+      <li>Navegador moderno (Chrome, Edge, Firefox, Safari).</li>
+      <li>Cookies y almacenamiento local habilitado.</li>
+      <li>No se requiere instalación: sitio estático.</li>
+    </ul>
+
+    <h2>4. Estructura principal</h2>
+    <table>
+      <thead><tr><th>Página / Archivo</th><th>Función</th></tr></thead>
+      <tbody>
+        <tr><td><code>html/index.html</code></td><td>Inicio del sitio</td></tr>
+        <tr><td><code>html/servicios.html</code></td><td>Listado de servicios</td></tr>
+        <tr><td><code>html/nosotros.html</code></td><td>Información institucional</td></tr>
+        <tr><td><code>html/Reserva.html</code></td><td>Formulario de reserva</td></tr>
+        <tr><td><code>html/Registro.html</code></td><td>Registro de clientes</td></tr>
+        <tr><td><code>html/LoginCliente.html</code></td><td>Login único (clientes + personal)</td></tr>
+        <tr><td><code>html/reservas/panel.html</code></td><td>Panel protegido de reservas</td></tr>
+      </tbody>
+    </table>
+
+    <h2>5. Roles y permisos</h2>
+    <div class="roles">
+      <div class="role-box"><strong>Cliente</strong><br>Puede registrarse, iniciar sesión, crear reservas y ver el listado.</div>
+      <div class="role-box"><strong>Administrador</strong><br>Inicia con credenciales predefinidas, ve todas las reservas y puede eliminarlas.</div>
+      <div class="role-box"><strong>Recepcionista</strong><br>Igual que Administrador para efectos del panel (gestión básica).</div>
+    </div>
+    <div class="callout"><strong>Nota:</strong> Los usuarios del personal están codificados en <code>assets/js/Sesion.js</code>.</div>
+
+    <h2>6. Registro de clientes</h2>
+    <ol>
+      <li>Ir a <code>Registro.html</code>.</li>
+      <li>Completar ID, nombre y contraseña.</li>
+      <li>Enviar el formulario: se almacena en <code>localStorage</code>.</li>
+      <li>Ir a la página de inicio de sesión.</li>
+    </ol>
+
+    <h2>7. Inicio de sesión único</h2>
+    <ol>
+      <li>Ir a <code>LoginCliente.html</code>.</li>
+      <li>Ingresar "Usuario o ID" y contraseña.</li>
+      <li>El sistema intenta primero como cliente registrado.</li>
+      <li>Si no coincide, intenta como personal (admin / user).</li>
+      <li>Si es correcto, redirige al panel de reservas.</li>
+    </ol>
+    <p><strong>Credenciales por defecto:</strong> <code>admin / 123</code> | <code>user / 456</code></p>
+    <p><strong>Demo cliente:</strong> <code>demo / 1234</code> (sembrado para pruebas).</p>
+
+    <h2>8. Crear una reserva</h2>
+    <ol>
+      <li>Ir a <code>Reserva.html</code>.</li>
+      <li>Completar campos requeridos (nombre, teléfono, servicio, fecha mínima +2 días, hora, habitación).</li>
+      <li>Enviar. Se guarda en el navegador (clave <code>reservas</code>).</li>
+    </ol>
+
+    <h2>9. Panel de reservas</h2>
+    <p>Ubicado en <code>reservas/panel.html</code>. Exige sesión activa. Muestra todas las reservas guardadas localmente.</p>
+    <ul>
+      <li>Clientes: solo visualización.</li>
+      <li>Personal: puede eliminar filas (gestión básica).</li>
+    </ul>
+
+    <h2>10. Avatar y menú</h2>
+    <p>Tras iniciar sesión aparece un botón con iniciales (avatar). Al hacer clic despliega opciones: ir al panel y cerrar sesión.</p>
+
+    <h2>11. Cerrar sesión</h2>
+    <p>Desde el menú del avatar → "Cerrar sesión". Limpia la entrada <code>hotel_auth</code> de <code>localStorage</code> y vuelve a la pantalla de login.</p>
+
+    <h2>12. Solución de problemas</h2>
+    <ul>
+      <li><strong>No puedo iniciar sesión:</strong> Verifica credenciales, registra cliente si corresponde, limpia datos del sitio.</li>
+      <li><strong>No veo botón Eliminar:</strong> Solo roles distintos de Cliente lo muestran.</li>
+      <li><strong>No veo mis reservas en otro navegador:</strong> Se guardan localmente; no hay sincronización en la nube.</li>
+    </ul>
+
+    <h2>13. Seguridad y datos</h2>
+    <p>Los datos no viajan a un servidor. Se almacenan en <code>localStorage</code> para demostración. No usar para datos reales sensibles.</p>
+
+    <h2>14. Próximas mejoras sugeridas</h2>
+    <ul>
+      <li>Backend con API (Node/Express o similar).</li>
+      <li>Autenticación segura con hashing y tokens.</li>
+      <li>Filtro/búsqueda de reservas y paginación.</li>
+      <li>Exportación de reservas a CSV/PDF.</li>
+      <li>Roles adicionales con permisos granulares.</li>
+    </ul>
+
+    <h2>15. Glosario rápido</h2>
+    <table>
+      <thead><tr><th>Término</th><th>Descripción</th></tr></thead>
+      <tbody>
+        <tr><td>LocalStorage</td><td>Almacenamiento local del navegador clave/valor.</td></tr>
+        <tr><td>Cliente</td><td>Usuario que reserva servicios o habitaciones.</td></tr>
+        <tr><td>Administrador</td><td>Personal con capacidad de gestión.</td></tr>
+        <tr><td>Recepcionista</td><td>Personal operativo con funciones similares al administrador en este demo.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="footer-note">© 2025 Hotel Vega.OS — Manual de Usuario. Para PDF: usa la impresión del navegador. Para Word: abre este archivo directamente.</div>
+  </main>
+</body>
+</html>

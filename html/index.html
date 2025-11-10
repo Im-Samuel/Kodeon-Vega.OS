@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Vega — Inicio</title>
+  <!-- Estilos base (navbar/footer) -->
+  <link rel="stylesheet" href="../assets/css/stylelogin.css">
+  <!-- Estilos de sitio (hero, grids, secciones) -->
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+<header class="navbar">
+  <div class="navbar-content">
+    <nav>
+      <ul>
+  <li><a href="index.html">Inicio</a></li>
+  <li><a href="servicios.html">Servicios</a></li>
+  <li><a href="nosotros.html">Nosotros</a></li>
+  <li><a href="Reserva.html">Reservar</a></li>
+  <li><a href="LoginCliente.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </div>
+  <button id="auth-avatar" class="auth-avatar" hidden></button>
+  <div id="profile-dropdown" class="profile-dropdown" hidden></div>
+</header>
+  
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Hotel Vega</h1>
+        <p>Descubre un refugio moderno en el corazón de la ciudad. Confort, diseño y una atención memorable.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="Reserva.html">Reservar ahora</a>
+          <a class="btn btn-secondary" href="servicios.html">Ver servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloque de servicios destacados -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Servicios destacados</h2>
+  <div class="grid cards-3" aria-label="Servicios destacados en rejilla">
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8Z"/><path d="M7 10V7a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v3"/></svg>
+            </div>
+            <h3>Habitaciones</h3>
+            <p>Espacios luminosos con camas premium, wifi de alta velocidad y smart TV.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3V3Z"/><path d="M5 7v6a7 7 0 0 0 14 0V7"/><path d="M8 7v6"/><path d="M16 7v6"/></svg>
+            </div>
+            <h3>Restaurante</h3>
+            <p>Cocina de autor con ingredientes locales y carta de temporada.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M4 12h4"/><path d="M16 12h4"/><path d="M12 4v4"/><path d="M12 16v4"/></svg>
+            </div>
+            <h3>Spa & Wellness</h3>
+            <p>Sauna, masajes y tratamientos para desconectar y recargar energías.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA secundaria -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>Listo para tu próxima escapada</h2>
+        <a class="btn btn-primary" href="Reserva.html">Hacer una reserva</a>
+      </div>
+    </section>
+  </main>
+
+  
+  <script type="module" src="../assets/js/Auth.js"></script>
+  <script type="module" src="../assets/js/avatar.js"></script>
+</body>
+</html>

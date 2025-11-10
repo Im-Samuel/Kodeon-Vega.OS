@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Reserva</title>
+  <link rel="stylesheet" href="../assets/css/stylelogin.css">
+  <!-- Respectivo Js -->
+  <!-- <script type="module" src="" defer></script> -->
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+<header class="navbar">
+  <div class="navbar-content">
+    <nav>
+      <ul>
+  <li><a href="index.html">Inicio</a></li>
+  <li><a href="servicios.html">Servicios</a></li>
+  <li><a href="nosotros.html">Nosotros</a></li>
+  <li><a href="Reserva.html">Reservar</a></li>
+  <li><a href="LoginCliente.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </div>
+  <button id="auth-avatar" class="auth-avatar" hidden></button>
+  <div id="profile-dropdown" class="profile-dropdown" hidden></div>
+</header>
+
+  <!-- Contenido principal -->
+  <main>
+    <section class="formulario-container">
+      <h2>FORMULARIO DE RESERVA.</h2>
+      <p>Reservar con dos días de anticipación.</p>
+
+      <form id="reservaForm">
+        <label for="nombre">Nombre completo*</label>
+        <input type="text" id="nombre" required placeholder="Escribe tu nombre completo">
+
+        <label for="telefono">Teléfono*</label>
+        <input type="tel" id="telefono" required placeholder="Número de contacto">
+
+        <label for="servicio">Servicio solicitado*</label>
+        <select id="servicio" required>
+          <option value="">Seleccione un servicio</option>
+          <option value="Spa">Spa</option>
+          <option value="Piscina">Piscina</option>
+          <option value="Restaurante">Restaurante</option>
+          <option value="Habitación">Habitación</option>
+        </select>
+
+        <label for="fecha">Fecha*</label>
+        <input type="date" id="fecha" required>
+
+        <label for="hora">Hora*</label>
+        <input type="time" id="hora" required>
+
+        <label for="habitacion">Tipo de habitación*</label>
+        <select id="habitacion" required>
+          <option value="">Seleccione</option>
+          <option value="Sencilla">Sencilla</option>
+          <option value="Doble">Doble</option>
+          <option value="Suite">Suite</option>
+        </select>
+
+        <label for="info">Información adicional</label>
+        <textarea id="info" rows="3" placeholder="Opcional"></textarea>
+
+        <button type="submit" class="btn-login">Solicitar reserva</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  
+
+
+  <script type="module" src="../assets/js/Auth.js"></script>
+  <script type="module" src="../assets/js/avatar.js"></script>
+  <script type="module" src="../assets/js/Reserva.js" defer></script>
+
+</body>
+</html>

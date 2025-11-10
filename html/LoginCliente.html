@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="../assets/css/stylelogin.css">
+</head>
+
+<body>
+ <!-- Barra de navegación -->
+<header class="navbar">
+  <div class="navbar-content">
+    <nav>
+      <ul>
+  <li><a href="index.html">Inicio</a></li>
+  <li><a href="servicios.html">Servicios</a></li>
+  <li><a href="nosotros.html">Nosotros</a></li>
+  <li><a href="Reserva.html">Reservar</a></li>
+  <li><a href="LoginCliente.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </div>
+  <button id="auth-avatar" class="auth-avatar" hidden></button>
+  <div id="profile-dropdown" class="profile-dropdown" hidden></div>
+</header>
+
+
+  <!-- Contenedor de Login -->
+  <main>
+    <section class="login-box">
+      <form id="login-form">
+  <label for="idUsuario">Usuario o ID</label>
+  <input type="text" id="idUsuario" placeholder="Ingrese su usuario o ID" required>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+
+        <button type="submit" class="btn-login">Sign In</button>
+        <a href="#" class="forgot">¿Olvidó su ID?</a>
+        <a href="Registro.html" class="forgot">¿No tienes cuenta? Regístrate</a>
+      </form>
+
+      <div id="mensaje"></div>
+
+  <button id="btn-perfil" class="btn-perfil" hidden>Ver Perfil</button>
+
+  <div id="perfil" class="perfil" hidden>
+        <h3>Mi Perfil</h3>
+        <p><strong>ID:</strong> <span id="perfil-id"></span></p>
+        <p><strong>Nombre:</strong> <span id="perfil-nombre"></span></p>
+        <p><strong>Rol:</strong> <span id="perfil-rol"></span></p>
+        <button id="logout" class="btn-logout">Cerrar Sesión</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  
+
+  <script type="module" src="../assets/js/Auth.js"></script>
+  <script type="module" src="../assets/js/avatar.js"></script>
+  <script type="module" src="../assets/js/seed-cliente.js"></script>
+  <script type="module" src="../assets/js/login-cliente.js"></script>
+</body>
+
+</html>

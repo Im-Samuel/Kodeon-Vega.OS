@@ -1,0 +1,418 @@
+/* ---------- ESTILO GENERAL ---------- */
+/* Resetea márgenes y define fuente base */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+/* ================================
+   HEADER Y MENÚ SUPERIOR LIMPIO
+   ================================ */
+header {
+  background: transparent; /* Sin fondo */
+  margin: 0 30px 30px 0px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  z-index: 10;
+}
+
+/* Contenedor general del navbar */
+.navbar {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: transparent;
+  padding-top: 10px;
+}
+
+/* Menú curvado centrado */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 0 0 60px 60px;
+  padding: 15px 60px;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+/* Efecto de sombra difusa inferior */
+.navbar-content::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 40px;
+  background: radial-gradient(ellipse at center,
+      rgba(0, 0, 0, 0.15) 0%,
+      transparent 80%);
+  border-radius: 50%;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* Elementos del menú */
+.navbar-content nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-content nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-content nav ul li a:hover {
+  color: #555;
+}
+
+/* ================================
+   BOTÓN PERSONAL INDEPENDIENTE
+   ================================ */
+.btn-cliente {
+  position: absolute;
+  top: 25px;       /* Alineado verticalmente con el menú */
+  right: 80px;     /* Separado del borde derecho */
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.btn-cliente:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   AVATAR PERFIL (ESQUINA IZQUIERDA)
+   ================================ */
+.auth-avatar{
+  position:absolute;
+  top:20px;
+  left:30px;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#e5e7eb; /* gris claro */
+  color:#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:13px;
+  border:1px solid #d1d5db;
+  cursor:pointer;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+.auth-avatar:hover{background:#dfe3e7}
+
+.profile-dropdown{
+  position:absolute;
+  top:64px;
+  left:24px;
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:12px;
+  padding:12px;
+  box-shadow:0 12px 24px rgba(0,0,0,.12);
+  min-width:220px;
+  z-index:20;
+}
+.profile-summary{font-size:14px;margin-bottom:8px}
+.profile-summary span{color:#666;font-size:12px}
+.profile-actions{display:flex;gap:8px;align-items:center}
+.profile-link{font-size:13px;text-decoration:none;background:#f4f4f4;border:1px solid #e5e5e5;padding:6px 10px;border-radius:8px;color:#111}
+.profile-link:hover{background:#eee}
+
+/* ---------- CONTENIDO PRINCIPAL ---------- */
+/* Centra el contenido y reduce el espacio vertical */
+main {
+  flex: 1; /* Ocupa el espacio restante entre navbar y footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0; /* <--- reduce el espacio vertical */
+  background-color: #fafafa;
+}
+
+/* ---------- LOGIN BOX ---------- */
+/* Caja blanca centrada con sombra */
+.login-box {
+  width: 350px;
+  margin-top: 3%;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  text-align: center;
+}
+
+/* Formulario interno */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Etiquetas de los campos */
+.login-box label {
+  text-align: left;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Campos de texto */
+.login-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Botón principal */
+.btn-login {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 8px;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: #444;
+}
+
+/* Enlace "¿Olvidó su contraseña?" */
+.forgot {
+  font-size: 0.9em;
+  color: #666;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* ---------- PERFIL ---------- */
+/* Tarjeta de perfil que aparece tras iniciar sesión */
+.perfil {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.btn-logout {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+/* Pie de página con 3 columnas */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  background: #111;
+  color: #fff;
+  padding: 20px 0; /* <-- reducido de 40px a 30px */
+  flex-wrap: wrap;
+}
+
+/* Cada bloque del footer */
+.footer-item {
+  width: 30%;
+  text-align: center;
+  min-width: 200px;
+}
+
+.footer-item h4 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.footer-item p {
+  color: #ccc;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   FORMULARIO DE RESERVA — ESTILO Y ANOTACIONES
+   ===================================================== */
+
+/* --- CONTENEDOR PRINCIPAL DEL FORMULARIO --- */
+.formulario-container {
+  background: #ffffff;                  /* Fondo blanco limpio */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);  /* Sombra suave para darle relieve */
+  padding: 30px;                        /* Espacio interno amplio */
+  border-radius: 15px;                  /* Bordes redondeados */
+  max-width: 500px;                     /* Ancho máximo del formulario */
+  width: 100%;                          /* Se adapta a pantallas pequeñas */
+  margin: -25px auto; 
+  margin-top: 2%;                   /* Centrado vertical y horizontal */
+  text-align: left;                     /* Alinea el texto de las etiquetas a la izquierda */
+  font-family: "Poppins", sans-serif;   /* Fuente moderna y legible */
+}
+
+/* --- TÍTULO Y DESCRIPCIÓN --- */
+.formulario-container h2 {
+  font-size: 1.5em;
+  color: #222;
+  text-align: center;                   /* Centra el título */
+  margin-bottom: 8px;
+}
+
+.formulario-container p {
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* --- FORMULARIO EN COLUMNA --- */
+.formulario-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;                            /* Espacio vertical uniforme entre los campos */
+}
+
+/* --- ETIQUETAS --- */
+.formulario-container label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0px;
+}
+
+/* --- CAMPOS DE ENTRADA UNIFORMES --- */
+.formulario-container input,
+.formulario-container select,
+.formulario-container textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+  height: 45px;                         /* Misma altura para todos los campos */
+  transition: border-color 0.3s ease;
+}
+
+/* --- CAMPOS ESPECÍFICOS: FECHA Y HORA --- */
+.formulario-container input[type="date"],
+.formulario-container input[type="time"] {
+  line-height: normal;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* --- EFECTO AL ENFOCAR --- */
+.formulario-container input:focus,
+.formulario-container select:focus,
+.formulario-container textarea:focus {
+  border-color: #000;
+  outline: none;
+}
+
+/* --- BOTÓN DE ENVÍO --- */
+.formulario-container button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+/* --- EFECTO HOVER DEL BOTÓN --- */
+.formulario-container button:hover {
+  background: #333;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 600px) {
+  .formulario-container {
+    padding: 20px;
+  }
+}
+
+/* Estilos para el listado de reservas y mensajes */
+.mensaje-reserva {
+  margin: 12px 0 18px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.mensaje-reserva.success {
+  background: #e6ffed;
+  color: #116633;
+  border: 1px solid #b7f0c2;
+}
+.mensaje-reserva.error {
+  background: #ffecec;
+  color: #8f1b1b;
+  border: 1px solid #f4bcbc;
+}
+.reserva-list {
+  margin-top: 18px;
+  border-collapse: collapse;
+  width: 100%;
+}
+.reserva-list th,
+.reserva-list td {
+  border: 1px solid #e6e6e6;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+.reserva-list th {
+  background: #fafafa;
+  text-align: left;
+}
+.reserva-empty {
+  color: #666;
+  font-size: 14px;
+  margin-top: 8px;
+}

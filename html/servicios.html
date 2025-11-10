@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Vega — Servicios</title>
+  <link rel="stylesheet" href="../assets/css/stylelogin.css" />
+  <link rel="stylesheet" href="../assets/css/site.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="Reserva.html">Reservar</a></li>
+          <li><a href="LoginCliente.html">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button id="auth-avatar" class="auth-avatar" hidden></button>
+    <div id="profile-dropdown" class="profile-dropdown" hidden></div>
+  </header>
+
+  <main>
+    <section class="services-hero container">
+      <h1>Nuestros servicios</h1>
+      <p>Diseñados para tu confort: desde habitaciones modernas hasta experiencias gastronómicas y bienestar.</p>
+    </section>
+
+    <section class="section">
+      <div class="container">
+  <div class="grid cards-3" aria-label="Listado de servicios en rejilla">
+          <article class="card service-card">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8Z"/><path d="M7 10V7a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v3"/></svg>
+            </div>
+            <h3>Habitaciones</h3>
+            <p>Opciones Sencilla, Doble y Suite con amenities premium, escritorio y climatización.</p>
+            <div class="price">Desde $60 USD/noche</div>
+          </article>
+          <article class="card service-card">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3V3Z"/><path d="M5 7v6a7 7 0 0 0 14 0V7"/><path d="M8 7v6"/><path d="M16 7v6"/></svg>
+            </div>
+            <h3>Restaurante</h3>
+            <p>Desayuno buffet, almuerzos ejecutivos y cenas a la carta con productos locales.</p>
+            <div class="price">Desayuno incluido en ciertas tarifas</div>
+          </article>
+          <article class="card service-card">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M4 12h4"/><path d="M16 12h4"/><path d="M12 4v4"/><path d="M12 16v4"/></svg>
+            </div>
+            <h3>Spa & Wellness</h3>
+            <p>Masajes, sauna, circuito hídrico y tratamientos faciales. Reserva previa requerida.</p>
+            <div class="price">Tratamientos desde $25 USD</div>
+          </article>
+          <article class="card service-card">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M12 2v20"/></svg>
+            </div>
+            <h3>Piscina & Terraza</h3>
+            <p>Piscina climatizada con vista urbana y terraza para cócteles al atardecer.</p>
+            <div class="price">Acceso incluido para huéspedes</div>
+          </article>
+          <article class="card service-card">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3V6Z"/><path d="M7 6v12"/><path d="M17 6v12"/><path d="M3 10h18"/></svg>
+            </div>
+            <h3>Salones & Eventos</h3>
+            <p>Salones modulables con proyección, sonido y coffee break personalizado.</p>
+            <div class="price">Solicita una cotización</div>
+          </article>
+          <article class="card service-card">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18l-2 8H5l-2-8Z"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </div>
+            <h3>Transporte</h3>
+            <p>Traslados desde/hacia aeropuerto con conductores certificados.</p>
+            <div class="price">Con costo adicional</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>¿Listo para disfrutarlo?</h2>
+        <a class="btn btn-primary" href="Reserva.html">Reservar ahora</a>
+      </div>
+    </section>
+  </main>
+
+  
+  <script type="module" src="../assets/js/Auth.js"></script>
+  <script type="module" src="../assets/js/avatar.js"></script>
+  </body>
+</html>
