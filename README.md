@@ -111,7 +111,7 @@ Cliente demo (solo para pruebas):
 
 Hecho con HTML, CSS y JavaScript vanilla. Diseñado para ser simple de correr y extender.
 
-## 📄 Manual de Usuario
+## Manual de Usuario
 
 Se incluyen dos versiones en `docs/`:
 
