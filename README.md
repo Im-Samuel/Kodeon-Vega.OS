@@ -119,3 +119,21 @@ Se incluyen dos versiones en `docs/`:
 - `docs/ManualUsuario.md` (editable en texto plano, compatible con conversión rápida a otros formatos).
 
 Puedes abrir el HTML directamente en Microsoft Word y luego guardar como `.docx` si requieres un archivo Word.
+
+## Créditos
+
+Desarrollado por el equipo:
+
+- Samuel Mejia Chavrriaga
+	- @im-samuel
+	- samuel1022007@gmail.com
+- Violeta VInasco
+	- @violeta248
+- Alejandro Ortegon
+- Juan Felipe Rodriguez
+	- @JuanFelipeRodriguezCastro
+- Esteban Mera
+	- @estebanmeraaranda-arch 
+- Juan Sebastian Moran
+- Maria Fernanda Munoz
+- Jhon Ricky Chito
